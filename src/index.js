@@ -19,18 +19,18 @@ app.use(express.json());
 
 // Template engine.
 app.engine(
-        'hbs',
-       hbs.express4({
+    'hbs',
+    hbs.express4({
         partialsDir: [
-                    path.join(__dirname, 'resources/views/partials'),
-                 path.join(__dirname, 'resources/views/pages'),
+            path.join(__dirname, 'resources/views/partials'),
+            path.join(__dirname, 'resources/views/pages'),
         ],
     }),
 );
 app.set('view engine', 'hbs');
 app.set('views', [
-    path.join(__dirname, '/resources/views'),
-    path.join(__dirname, '/resources/views/pages'),
+           path.join(__dirname, '/resources/views'),
+        path.join(__dirname, '/resources/views/pages'),
 ]);
 route(app);
 app.listen(port, () => {
@@ -45,4 +45,4 @@ app.listen(port, () => {
 //   },
 //   "lint-staged": {
 //     "src/**/*.{js,json,scss}": "prettier --tab-width 4 --single-quote --trailing-comma all --write"
-//   },
+//   }, 
