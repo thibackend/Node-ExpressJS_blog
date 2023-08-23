@@ -1,3 +1,5 @@
+const Course = require("../models/Course");
+
 class PostController {
     index(req, res) {
         res.render('post', { layout: 'main' });
